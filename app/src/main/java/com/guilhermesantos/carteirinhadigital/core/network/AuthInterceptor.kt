@@ -1,36 +1,28 @@
 package com.guilhermesantos.carteirinhadigital2devest_b.core.network
 
-import com.guilhermesantos.carteirinhadigital2devest_b.core.auth.AuthTokenStore
+import com.guilhermesantos.carteirinhadigital2devest_b.core.auth.SessionTokenStore
 import okhttp3.Interceptor
 import okhttp3.Response
 
 class AuthInterceptor(
-    private val tokenStore: AuthTokenStore
+    private val sessionTokenStore: SessionTokenStore
 ) : Interceptor {
 
-    override fun intercept(
-        chain: Interceptor.Chain
-    ): Response {
+    override fun intercept(chain: Interceptor.Chain): Response {
 
-        val originalRequest = chain.request()
-
-        val token = tokenStore.getToken()
+        val requestOriginal = chain.request()
+        val token = sessionTokenStore.obter()
 
         if (token.isNullOrBlank()) {
-            return chain.proceed(originalRequest)
+            return chain.proceed(requestOriginal)
         }
 
-        val authenticatedRequest =
-            originalRequest
-                .newBuilder()
-                .header(
-                    "Authorization",
-                    "Bearer $token"
-                )
-                .build()
+        val requestAutenticada = requestOriginal.newBuilder()
+            .header(
+                "Authorization",
+                "Bearer $token"
+            ).build()
 
-        return chain.proceed(
-            authenticatedRequest
-        )
+        return chain.proceed(requestAutenticada)
     }
 }
