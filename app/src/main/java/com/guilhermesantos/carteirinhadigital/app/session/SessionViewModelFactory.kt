@@ -1,8 +1,8 @@
-package com.guilhermesantos.carteirinhadigital2devest_b.app.session
+package com.guilhermesantos.carteirinhadigital.app.session
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.guilhermesantos.carteirinhadigital2devest_b.core.auth.SessionTokenStore
+import com.guilhermesantos.carteirinhadigital.core.auth.SessionTokenStore
 
 class SessionViewModelFactory(
     private val sessionTokenStore : SessionTokenStore

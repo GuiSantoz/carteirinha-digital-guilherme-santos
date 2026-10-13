@@ -1,10 +1,11 @@
-package com.guilhermesantos.carteirinhadigital2devest_b.core.designsystem.theme
+package com.guilhermesantos.carteirinhadigital.core.designsystem.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.googlefonts.Font
+
 import androidx.compose.ui.text.googlefonts.GoogleFont
-import com.guilhermesantos.carteirinhadigital2devest_b.R
+import androidx.compose.ui.text.googlefonts.Font
+import com.guilhermesantos.carteirinhadigital.R
 
 val provider = GoogleFont.Provider(
     providerAuthority = "com.google.android.gms.fonts",
@@ -14,14 +15,14 @@ val provider = GoogleFont.Provider(
 
 val bodyFontFamily = FontFamily(
     Font(
-        googleFont = GoogleFont("Abyssinica SIL"),
+        googleFont = GoogleFont("Open Sans"),
         fontProvider = provider,
     )
 )
 
 val displayFontFamily = FontFamily(
     Font(
-        googleFont = GoogleFont("Montserrat"),
+        googleFont = GoogleFont("Lato"),
         fontProvider = provider,
     )
 )

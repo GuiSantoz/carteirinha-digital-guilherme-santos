@@ -1,4 +1,4 @@
-package com.guilhermesantos.carteirinhadigital2devest_b
+package com.guilhermesantos.carteirinhadigital
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

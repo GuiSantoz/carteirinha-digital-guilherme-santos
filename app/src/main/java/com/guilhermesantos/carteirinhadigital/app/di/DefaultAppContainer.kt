@@ -1,14 +1,14 @@
-package com.guilhermesantos.carteirinhadigital2devest_b.app.di
+package com.guilhermesantos.carteirinhadigital.app.di
 
-import com.guilhermesantos.carteirinhadigital2devest_b.core.auth.SessionTokenStore
-import com.guilhermesantos.carteirinhadigital2devest_b.core.network.NetworkClient
-import com.guilhermesantos.carteirinhadigital2devest_b.feature.login.data.remote.service.AuthApi
-import com.guilhermesantos.carteirinhadigital2devest_b.feature.login.data.repository.ApiLoginRepositoryImpl
-import com.guilhermesantos.carteirinhadigital2devest_b.feature.login.data.repository.FakeAuthRepository
-import com.guilhermesantos.carteirinhadigital2devest_b.feature.login.domain.repository.LoginRepository
-import com.guilhermesantos.carteirinhadigital2devest_b.feature.unidadecurriculares.data.remote.service.UnidadeCurricularApi
-import com.guilhermesantos.carteirinhadigital2devest_b.feature.unidadecurriculares.data.repository.ApiUnidadeCurricularRepositoryImpl
-import com.guilhermesantos.carteirinhadigital2devest_b.feature.unidadecurriculares.domain.repository.UnidadeCurricularRepository
+import com.guilhermesantos.carteirinhadigital.core.auth.SessionTokenStore
+import com.guilhermesantos.carteirinhadigital.core.network.NetworkClient
+import com.guilhermesantos.carteirinhadigital.feature.login.data.remote.service.AuthApi
+import com.guilhermesantos.carteirinhadigital.feature.login.data.repository.ApiLoginRepositoryImpl
+import com.guilhermesantos.carteirinhadigital.feature.login.data.repository.FakeAuthRepository
+import com.guilhermesantos.carteirinhadigital.feature.login.domain.repository.LoginRepository
+import com.guilhermesantos.carteirinhadigital.feature.aluno.unidadescurriculares.data.remote.service.UnidadeCurricularApi
+import com.guilhermesantos.carteirinhadigital.feature.aluno.unidadescurriculares.data.repository.ApiUnidadeCurricularRepositoryImpl
+import com.guilhermesantos.carteirinhadigital.feature.aluno.unidadescurriculares.domain.repository.UnidadeCurricularRepository
 
 class DefaultAppContainer : AppContainer {
     override val sessionTokenStore : SessionTokenStore = SessionTokenStore()
@@ -23,9 +23,9 @@ class DefaultAppContainer : AppContainer {
             AuthApi::class.java
         )
     }
-    private val unidadeCurricularApi : UnidadeCurricularApi by lazy {
+    private val unidadeCurricularApi : com.guilhermesantos.carteirinhadigital.feature.aluno.unidadescurriculares.data.remote.service.UnidadeCurricularApi by lazy {
         networkClient.createAuthenticated(
-            UnidadeCurricularApi::class.java
+            _root_ide_package_.com.guilhermesantos.carteirinhadigital.feature.aluno.unidadescurriculares.data.remote.service.UnidadeCurricularApi::class.java
         )
     }
     override val loginRepository : LoginRepository by lazy {
@@ -37,8 +37,8 @@ class DefaultAppContainer : AppContainer {
             )
         }
     }
-    override val unidadeCurricularRepository : UnidadeCurricularRepository by lazy {
-        ApiUnidadeCurricularRepositoryImpl(
+    override val unidadeCurricularRepository : com.guilhermesantos.carteirinhadigital.feature.aluno.unidadescurriculares.domain.repository.UnidadeCurricularRepository by lazy {
+        _root_ide_package_.com.guilhermesantos.carteirinhadigital.feature.aluno.unidadescurriculares.data.repository.ApiUnidadeCurricularRepositoryImpl(
             api = unidadeCurricularApi
         )
     }

@@ -1,7 +1,7 @@
-package com.guilhermesantos.carteirinhadigital2devest_b.core.network
+package com.guilhermesantos.carteirinhadigital.core.network
 
 import com.jakewharton.retrofit2.converter.kotlinx.serialization.asConverterFactory
-import com.guilhermesantos.carteirinhadigital2devest_b.core.auth.SessionTokenStore
+import com.guilhermesantos.carteirinhadigital.core.auth.SessionTokenStore
 import kotlinx.serialization.json.Json
 import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient

@@ -1,4 +1,4 @@
-package com.guilhermesantos.carteirinhadigital2devest_b.core.auth
+package com.guilhermesantos.carteirinhadigital.core.auth
 
 class SessionTokenStore {
 
