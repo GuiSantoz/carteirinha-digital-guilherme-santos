@@ -1,4 +1,4 @@
-package com.guilhermesantos.carteirinhadigital2devest_b.app
+package com.guilhermesantos.carteirinhadigital.app
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.runtime.Composable
@@ -7,9 +7,9 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.navigation.compose.rememberNavController
-import com.guilhermesantos.carteirinhadigital2devest_b.app.di.AppContainer
-import com.guilhermesantos.carteirinhadigital2devest_b.app.navigation.AppNavHost
-import com.guilhermesantos.carteirinhadigital2devest_b.core.designsystem.theme.CarteirinhaDigital2DEVEST_BTheme
+import com.guilhermesantos.carteirinhadigital.app.di.AppContainer
+import com.guilhermesantos.carteirinhadigital.app.navigation.AppNavHost
+import com.guilhermesantos.carteirinhadigital.core.designsystem.theme.carteirinhadigitalTheme
 
 @Composable
 fun App(container: AppContainer) {
@@ -17,7 +17,7 @@ fun App(container: AppContainer) {
     val systemDarkTheme = isSystemInDarkTheme()
     var darkTheme by rememberSaveable { mutableStateOf(systemDarkTheme) }
 
-    CarteirinhaDigital2DEVEST_BTheme(
+    carteirinhadigitalTheme(
         darkTheme = darkTheme
     ) {
         val navController = rememberNavController()

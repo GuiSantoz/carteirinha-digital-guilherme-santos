@@ -1,11 +1,10 @@
-package com.guilhermesantos.carteirinhadigital2devest_b.feature.unidadecurriculares.data.remote.service
+package com.guilhermesantos.carteirinhadigital.feature.unidadecurriculares.data.remote.service
 
-import com.guilhermesantos.carteirinhadigital2devest_b.feature.unidadecurriculares.data.remote.dto.UnidadeCurricularDTO
+import com.guilhermesantos.carteirinhadigital.feature.unidadecurriculares.data.remote.dto.UnidadeCurricularDto
 import retrofit2.http.GET
 
 interface UnidadeCurricularApi {
 
     @GET("unidades-curriculares")
-    suspend fun listarUnidadesCurriculares():
-            List<UnidadeCurricularDTO>
+    suspend fun listar(): List<UnidadeCurricularDto>
 }

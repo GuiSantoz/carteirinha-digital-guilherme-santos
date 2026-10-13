@@ -1,4 +1,4 @@
-package com.guilhermesantos.carteirinhadigital2devest_b.feature.unidadecurriculares.presentation.component
+package com.guilhermesantos.carteirinhadigital.feature.unidadecurriculares.presentation.component
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -29,18 +29,18 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.guilhermesantos.carteirinhadigital2devest_b.core.designsystem.component.StatusPill
-import com.guilhermesantos.carteirinhadigital2devest_b.core.designsystem.theme.iconBlue
-import com.guilhermesantos.carteirinhadigital2devest_b.core.designsystem.theme.iconBlueContainer
-import com.guilhermesantos.carteirinhadigital2devest_b.core.designsystem.theme.iconOrange
-import com.guilhermesantos.carteirinhadigital2devest_b.core.designsystem.theme.iconOrangeContainer
-import com.guilhermesantos.carteirinhadigital2devest_b.core.designsystem.theme.iconPurple
-import com.guilhermesantos.carteirinhadigital2devest_b.core.designsystem.theme.iconPurpleContainer
-import com.guilhermesantos.carteirinhadigital2devest_b.core.designsystem.theme.iconTeal
-import com.guilhermesantos.carteirinhadigital2devest_b.core.designsystem.theme.iconTealContainer
-import com.guilhermesantos.carteirinhadigital2devest_b.core.designsystem.theme.successContainer
-import com.guilhermesantos.carteirinhadigital2devest_b.core.designsystem.theme.successGreen
-import com.guilhermesantos.carteirinhadigital2devest_b.feature.unidadecurriculares.domain.model.UnidadeCurricular
+import com.guilhermesantos.carteirinhadigital.core.designsystem.component.StatusPill
+import com.guilhermesantos.carteirinhadigital.core.designsystem.theme.iconBlue
+import com.guilhermesantos.carteirinhadigital.core.designsystem.theme.iconBlueContainer
+import com.guilhermesantos.carteirinhadigital.core.designsystem.theme.iconOrange
+import com.guilhermesantos.carteirinhadigital.core.designsystem.theme.iconOrangeContainer
+import com.guilhermesantos.carteirinhadigital.core.designsystem.theme.iconPurple
+import com.guilhermesantos.carteirinhadigital.core.designsystem.theme.iconPurpleContainer
+import com.guilhermesantos.carteirinhadigital.core.designsystem.theme.iconTeal
+import com.guilhermesantos.carteirinhadigital.core.designsystem.theme.iconTealContainer
+import com.guilhermesantos.carteirinhadigital.core.designsystem.theme.successContainer
+import com.guilhermesantos.carteirinhadigital.core.designsystem.theme.successGreen
+import com.guilhermesantos.carteirinhadigital.feature.unidadecurriculares.domain.model.UnidadeCurricular
 
 private data class UcVisual(val icon: ImageVector, val container: Color, val tint: Color)
 

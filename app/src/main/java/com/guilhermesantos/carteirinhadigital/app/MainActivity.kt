@@ -1,4 +1,4 @@
-package com.guilhermesantos.carteirinhadigital2devest_b.app
+package com.guilhermesantos.carteirinhadigital.app
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity

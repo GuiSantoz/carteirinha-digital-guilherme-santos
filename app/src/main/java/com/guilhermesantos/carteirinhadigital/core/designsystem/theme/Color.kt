@@ -1,4 +1,4 @@
-package com.guilhermesantos.carteirinhadigital2devest_b.core.designsystem.theme
+package com.guilhermesantos.carteirinhadigital.core.designsystem.theme
 
 import androidx.compose.ui.graphics.Color
 

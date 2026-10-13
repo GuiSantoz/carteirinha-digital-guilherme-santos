@@ -1,14 +1,14 @@
-package com.guilhermesantos.carteirinhadigital2devest_b.app.di
+package com.guilhermesantos.carteirinhadigital.app.di
 
-import com.guilhermesantos.carteirinhadigital2devest_b.core.auth.SessionTokenStore
-import com.guilhermesantos.carteirinhadigital2devest_b.core.network.NetworkClient
-import com.guilhermesantos.carteirinhadigital2devest_b.feature.login.data.remote.service.AuthApi
-import com.guilhermesantos.carteirinhadigital2devest_b.feature.login.data.repository.ApiLoginRepositoryImpl
-import com.guilhermesantos.carteirinhadigital2devest_b.feature.login.data.repository.FakeAuthRepository
-import com.guilhermesantos.carteirinhadigital2devest_b.feature.login.domain.repository.LoginRepository
-import com.guilhermesantos.carteirinhadigital2devest_b.feature.unidadecurriculares.data.remote.service.UnidadeCurricularApi
-import com.guilhermesantos.carteirinhadigital2devest_b.feature.unidadecurriculares.data.repository.ApiUnidadeCurricularRepositoryImpl
-import com.guilhermesantos.carteirinhadigital2devest_b.feature.unidadecurriculares.domain.repository.UnidadeCurricularRepository
+import com.guilhermesantos.carteirinhadigital.core.auth.SessionTokenStore
+import com.guilhermesantos.carteirinhadigital.core.network.NetworkClient
+import com.guilhermesantos.carteirinhadigital.feature.login.data.remote.service.AuthApi
+import com.guilhermesantos.carteirinhadigital.feature.login.data.repository.ApiLoginRepositoryImpl
+import com.guilhermesantos.carteirinhadigital.feature.login.data.repository.FakeAuthRepository
+import com.guilhermesantos.carteirinhadigital.feature.login.domain.repository.LoginRepository
+import com.guilhermesantos.carteirinhadigital.feature.unidadecurriculares.data.remote.service.UnidadeCurricularApi
+import com.guilhermesantos.carteirinhadigital.feature.unidadecurriculares.data.repository.ApiUnidadeCurricularRepositoryImpl
+import com.guilhermesantos.carteirinhadigital.feature.unidadecurriculares.domain.repository.UnidadeCurricularRepository
 
 class DefaultAppContainer : AppContainer {
     override val sessionTokenStore : SessionTokenStore = SessionTokenStore()

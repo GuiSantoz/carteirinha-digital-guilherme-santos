@@ -1,4 +1,4 @@
-package com.guilhermesantos.carteirinhadigital2devest_b.app.ui
+package com.guilhermesantos.carteirinhadigital.app.ui
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
@@ -40,8 +40,8 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
-import com.guilhermesantos.carteirinhadigital2devest_b.R
-import com.guilhermesantos.carteirinhadigital2devest_b.feature.login.domain.model.UsuarioLogado
+import com.guilhermesantos.carteirinhadigital.R
+import com.guilhermesantos.carteirinhadigital.feature.login.domain.model.UsuarioLogado
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)

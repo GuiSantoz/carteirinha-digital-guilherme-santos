@@ -1,6 +1,6 @@
-package com.guilhermesantos.carteirinhadigital2devest_b.core.network
+package com.guilhermesantos.carteirinhadigital.core.network
 
-import com.guilhermesantos.carteirinhadigital2devest_b.core.auth.SessionTokenStore
+import com.guilhermesantos.carteirinhadigital.core.auth.SessionTokenStore
 import okhttp3.Interceptor
 import okhttp3.Response
 

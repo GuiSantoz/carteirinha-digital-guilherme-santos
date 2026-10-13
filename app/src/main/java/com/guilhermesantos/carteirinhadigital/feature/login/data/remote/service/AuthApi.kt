@@ -1,7 +1,7 @@
-package com.guilhermesantos.carteirinhadigital2devest_b.feature.login.data.remote.service
+package com.guilhermesantos.carteirinhadigital.feature.login.data.remote.service
 
-import com.guilhermesantos.carteirinhadigital2devest_b.feature.login.data.remote.dto.LoginRequestDto
-import com.guilhermesantos.carteirinhadigital2devest_b.feature.login.data.remote.dto.LoginResponseDto
+import com.guilhermesantos.carteirinhadigital.feature.login.data.remote.dto.LoginRequestDto
+import com.guilhermesantos.carteirinhadigital.feature.login.data.remote.dto.LoginResponseDto
 import retrofit2.http.Body
 import retrofit2.http.POST
 

@@ -1,10 +1,10 @@
-package com.guilhermesantos.carteirinhadigital2devest_b.feature.unidadecurriculares.data.remote.dto
+package com.guilhermesantos.carteirinhadigital.feature.unidadecurriculares.data.remote.dto
 
-import com.guilhermesantos.carteirinhadigital2devest_b.feature.unidadecurriculares.domain.model.UnidadeCurricular
+import com.guilhermesantos.carteirinhadigital.feature.unidadecurriculares.domain.model.UnidadeCurricular
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class UnidadeCurricularDTO(
+data class UnidadeCurricularDto(
     val id: String,
     val nome: String,
     val professor: String,
@@ -13,6 +13,7 @@ data class UnidadeCurricularDTO(
     val media: Double,
     val faltas: Int
 ) {
+
     fun toDomain(): UnidadeCurricular {
         return UnidadeCurricular(
             id = id,

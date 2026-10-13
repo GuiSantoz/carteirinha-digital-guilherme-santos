@@ -1,4 +1,4 @@
-package com.guilhermesantos.carteirinhadigital2devest_b.app.navigation
+package com.guilhermesantos.carteirinhadigital.app.navigation
 
 sealed class Routes(val route: String) {
 

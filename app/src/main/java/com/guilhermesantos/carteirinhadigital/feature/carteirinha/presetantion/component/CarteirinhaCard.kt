@@ -1,4 +1,4 @@
-package com.guilhermesantos.carteirinhadigital2devest_b.feature.carteirinha.presentation.component
+package com.guilhermesantos.carteirinhadigital.feature.carteirinha.presetantion.component
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -26,11 +26,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.guilhermesantos.carteirinhadigital2devest_b.core.designsystem.component.StatusPill
-import com.guilhermesantos.carteirinhadigital2devest_b.core.designsystem.theme.cardMaroonEnd
-import com.guilhermesantos.carteirinhadigital2devest_b.core.designsystem.theme.cardMaroonStart
-import com.guilhermesantos.carteirinhadigital2devest_b.core.designsystem.theme.successContainer
-import com.guilhermesantos.carteirinhadigital2devest_b.core.designsystem.theme.successGreen
+import com.guilhermesantos.carteirinhadigital.core.designsystem.component.StatusPill
+import com.guilhermesantos.carteirinhadigital.core.designsystem.theme.cardMaroonEnd
+import com.guilhermesantos.carteirinhadigital.core.designsystem.theme.cardMaroonStart
+import com.guilhermesantos.carteirinhadigital.core.designsystem.theme.successContainer
+import com.guilhermesantos.carteirinhadigital.core.designsystem.theme.successGreen
 
 /**
  * Card da Carteirinha Digital com o mesmo visual (gradiente bordô, selo "ATIVO",

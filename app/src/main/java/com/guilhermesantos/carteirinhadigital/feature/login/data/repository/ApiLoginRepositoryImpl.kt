@@ -1,23 +1,27 @@
-package com.guilhermesantos.carteirinhadigital2devest_b.feature.login.data.repository
+package com.guilhermesantos.carteirinhadigital.feature.login.data.repository
 
-import com.guilhermesantos.carteirinhadigital2devest_b.feature.login.data.remote.dto.ErrorResponseDto
-import com.guilhermesantos.carteirinhadigital2devest_b.feature.login.data.remote.dto.LoginRequestDto
-import com.guilhermesantos.carteirinhadigital2devest_b.feature.login.data.remote.service.AuthApi
-import com.guilhermesantos.carteirinhadigital2devest_b.feature.login.domain.model.UsuarioLogado
+import com.guilhermesantos.carteirinhadigital.feature.login.domain.repository.LoginRepository
+
+import com.guilhermesantos.carteirinhadigital.feature.login.data.remote.dto.ErrorResponseDto
+import com.guilhermesantos.carteirinhadigital.feature.login.data.remote.dto.LoginRequestDto
+import com.guilhermesantos.carteirinhadigital.feature.login.data.remote.service.AuthApi
+import com.guilhermesantos.carteirinhadigital.feature.login.domain.model.UsuarioLogado
 import kotlinx.serialization.json.Json
 import retrofit2.HttpException
 import java.io.IOException
 
-class ApiLoginRepositoryImpl(
-    private val api: AuthApi
-) : LoginRepository {
+class ApiLoginRepositoryImpl(private val api: AuthApi) : LoginRepository {
 
-    override suspend fun login(usuario: String, senha: String): Result<UsuarioLogado> {
+    override suspend fun login(
+        login: String,
+        senha: String
+    ): Result<UsuarioLogado> {
         return runCatching {
-            val response = api.login(LoginRequestDto(login = usuario, senha = senha))
+            val response = api.login(LoginRequestDto(login = login, senha = senha))
             UsuarioLogado(
                 id = response.id,
                 nome = response.nome,
+                matricula = response.matricula,
                 curso = response.curso,
                 turma = response.turma,
                 token = response.token
@@ -43,12 +47,21 @@ class ApiLoginRepositoryImpl(
             return IllegalArgumentException("Login ou senha inválidos")
         }
 
-        val messageFromBody = exception.response()?.errorBody()?.string()?.let { body ->
-            runCatching {
-                Json { ignoreUnknownKeys = true }.decodeFromString<ErrorResponseDto>(body).message
-            }.getOrNull()
-        }
+        val messageFromBody = exception
+            .response()
+            ?.errorBody()
+            ?.string()
+            ?.let { body ->
+                runCatching {
+                    errorJson.decodeFromString<ErrorResponseDto>(body).message
+                }.getOrNull()
+            }
+        return IllegalStateException(
+            messageFromBody ?: "Erro no servidor (${exception.code()})."
+        )
+    }
 
-        return IllegalStateException(messageFromBody ?: "Erro no servidor (${exception.code()}).")
+    companion object {
+        private val errorJson = Json { ignoreUnknownKeys = true }
     }
 }

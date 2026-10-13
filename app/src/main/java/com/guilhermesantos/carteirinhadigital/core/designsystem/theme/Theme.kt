@@ -1,4 +1,4 @@
-package com.guilhermesantos.carteirinhadigital2devest_b.core.designsystem.theme
+package com.guilhermesantos.carteirinhadigital.core.designsystem.theme
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
@@ -248,7 +248,7 @@ val unspecified_scheme = ColorFamily(
 )
 
 @Composable
-fun CarteirinhaDigital2DEVEST_BTheme(
+fun carteirinhadigitalTheme(
     // Fixado em claro para manter a identidade visual do protótipo (Figma) em qualquer aparelho.
     darkTheme: Boolean = false,
     content: @Composable() () -> Unit

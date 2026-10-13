@@ -1,40 +1,34 @@
-package com.guilhermesantos.carteirinhadigital2devest_b.feature.unidadecurriculares.data.repository
+package com.guilhermesantos.carteirinhadigital.feature.unidadecurriculares.data.repository
 
-import com.guilhermesantos.carteirinhadigital2devest_b.feature.unidadecurriculares.data.remote.service.UnidadeCurricularApi
-import com.guilhermesantos.carteirinhadigital2devest_b.feature.unidadecurriculares.domain.model.UnidadeCurricular
-import com.guilhermesantos.carteirinhadigital2devest_b.feature.unidadecurriculares.domain.repository.UnidadeCurricularRepository
-import okio.IOException
+import com.guilhermesantos.carteirinhadigital.feature.unidadecurriculares.data.remote.service.UnidadeCurricularApi
+import com.guilhermesantos.carteirinhadigital.feature.unidadecurriculares.domain.model.UnidadeCurricular
+import com.guilhermesantos.carteirinhadigital.feature.unidadecurriculares.domain.repository.UnidadeCurricularRepository
 import retrofit2.HttpException
+import java.io.IOException
 
 class ApiUnidadeCurricularRepositoryImpl(
     private val api: UnidadeCurricularApi
 ) : UnidadeCurricularRepository {
-    override suspend fun listarUnidadesCurriculares(): Result<List<UnidadeCurricular>> {
+
+    override suspend fun listar(): Result<List<UnidadeCurricular>> {
         return runCatching {
-            api.listarUnidadesCurriculares().map {
+            api.listar().map {
                 it.toDomain()
             }
         }.recoverCatching { throwable ->
             throw when (throwable) {
                 is HttpException -> {
                     if (throwable.code() == 401) {
-                        IllegalStateException("Sua sessão expirou. Faça logn novamente")
+                        IllegalStateException("Sua sessão expirou. Faça login novamente.")
                     } else {
-                        IllegalStateException("Erro ao carregar unidades curriculares (${throwable.code()})")
+                        IllegalStateException("Erro ao carregar unidades curriculares (${throwable.code()}).")
                     }
                 }
-
                 is IOException ->
-                    IllegalStateException("Não foi possivel conectar na API")
-
+                    IllegalStateException("Não foi possível conectar à API.")
                 else ->
-                    IllegalStateException(
-                        throwable.message ?: "Erro ao carregar unidades curriculares"
-                    )
+                    IllegalStateException(throwable.message ?: "Erro ao carregar unidades curriculares.")
             }
-
         }
-
     }
-
 }

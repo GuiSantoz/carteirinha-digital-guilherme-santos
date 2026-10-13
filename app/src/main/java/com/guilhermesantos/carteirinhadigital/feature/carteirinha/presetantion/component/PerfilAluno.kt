@@ -1,4 +1,4 @@
-package com.guilhermesantos.carteirinhadigital2devest_b.feature.carteirinha.presentation.component
+package com.guilhermesantos.carteirinhadigital.feature.carteirinha.presetantion.component
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.border
@@ -16,11 +16,12 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.guilhermesantos.carteirinhadigital2devest_b.R
+import com.guilhermesantos.carteirinhadigital.R
 
 @Composable
 fun PerfilAluno(
     nome: String,
+    matricula: String,
     curso: String,
     idFoto: Int = R.drawable.login
 ) {
@@ -44,6 +45,10 @@ fun PerfilAluno(
         InfoAluno(
             label = "Nome",
             value = nome
+        )
+        InfoAluno(
+            label = "Matrícula",
+            value = matricula
         )
         InfoAluno(
             label = "Curso",

@@ -1,4 +1,4 @@
-package com.guilhermesantos.carteirinhadigital2devest_b.feature.login.presentation
+package com.guilhermesantos.carteirinhadigital.feature.login.presentation
 
 sealed interface LoginEvent {
     data class OnUsuarioChange(val value: String) : LoginEvent

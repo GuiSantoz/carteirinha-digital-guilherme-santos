@@ -1,4 +1,4 @@
-package com.guilhermesantos.carteirinhadigital2devest_b.feature.home_aluno.presentation.component
+package com.guilhermesantos.carteirinhadigital.feature.home_aluno.presentation.component
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.shape.RoundedCornerShape

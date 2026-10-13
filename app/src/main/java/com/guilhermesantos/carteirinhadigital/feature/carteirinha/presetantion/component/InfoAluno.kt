@@ -1,4 +1,4 @@
-package com.guilhermesantos.carteirinhadigital2devest_b.feature.carteirinha.presentation.component
+package com.guilhermesantos.carteirinhadigital.feature.carteirinha.presetantion.component
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row

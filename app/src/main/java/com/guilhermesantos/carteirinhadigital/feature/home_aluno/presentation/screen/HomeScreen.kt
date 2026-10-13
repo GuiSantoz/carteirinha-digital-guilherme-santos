@@ -1,4 +1,4 @@
-package com.guilhermesantos.carteirinhadigital2devest_b.feature.home_aluno.presentation.screen
+package com.guilhermesantos.carteirinhadigital.feature.home_aluno.presentation.screen
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -15,29 +15,27 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.guilhermesantos.carteirinhadigital2devest_b.app.navigation.Routes
-import com.guilhermesantos.carteirinhadigital2devest_b.core.designsystem.component.AppTopHeader
-import com.guilhermesantos.carteirinhadigital2devest_b.core.designsystem.theme.iconTeal
-import com.guilhermesantos.carteirinhadigital2devest_b.core.designsystem.theme.iconTealContainer
-import com.guilhermesantos.carteirinhadigital2devest_b.feature.carteirinha.presentation.component.CarteirinhaCard
-import com.guilhermesantos.carteirinhadigital2devest_b.feature.home_aluno.presentation.component.QuickNavCard
-import com.guilhermesantos.carteirinhadigital2devest_b.feature.login.domain.model.UsuarioLogado
+import androidx.navigation.compose.rememberNavController
+import com.guilhermesantos.carteirinhadigital.app.navigation.Routes
+import com.guilhermesantos.carteirinhadigital.core.designsystem.component.AppTopHeader
+import com.guilhermesantos.carteirinhadigital.core.designsystem.theme.iconTeal
+import com.guilhermesantos.carteirinhadigital.core.designsystem.theme.iconTealContainer
+import com.guilhermesantos.carteirinhadigital.feature.carteirinha.presetantion.component.CarteirinhaCard
+import com.guilhermesantos.carteirinhadigital.feature.home_aluno.presentation.component.QuickNavCard
+import com.guilhermesantos.carteirinhadigital.feature.login.domain.model.UsuarioLogado
 
 @Composable
 fun HomeScreen(
-    navController: NavController = NavController(
-        LocalContext.current
-    ),
-    modifier: Modifier = Modifier,
-    usuario: UsuarioLogado? = null
+    navController: NavController,
+    usuarioLogado: UsuarioLogado,
+    modifier: Modifier = Modifier
 ) {
-    val nomeExibicao = usuario?.nome ?: "Aluno(a)"
+    val nomeExibicao = usuarioLogado.nome
     val primeiroNome = nomeExibicao.trim().substringBefore(" ")
 
     LazyColumn(
@@ -47,7 +45,7 @@ fun HomeScreen(
         item {
             AppTopHeader(
                 nome = nomeExibicao,
-                subtitulo = usuario?.curso ?: "Carteirinha Digital"
+                subtitulo = usuarioLogado.curso
             )
         }
 
@@ -73,7 +71,7 @@ fun HomeScreen(
         item {
             CarteirinhaCard(
                 nome = nomeExibicao,
-                matricula = usuario?.id ?: "-",
+                matricula = usuarioLogado.matricula,
                 validade = "Dezembro / 2026",
                 compact = true,
                 modifier = Modifier
@@ -127,15 +125,17 @@ fun HomeScreen(
     showSystemUi = true
 )
 @Composable
-fun HomeScreenPreview() {
+private fun HomeScreenPreview() {
     HomeScreen(
-        modifier = Modifier.fillMaxSize(),
-        usuario = UsuarioLogado(
-            id = "2024-DF8809",
+        navController = rememberNavController(),
+        usuarioLogado = UsuarioLogado(
+            id = "1",
             nome = "Guilherme Santos",
+            matricula = "2024-DF8809",
             curso = "Desenvolvimento de Sistemas",
             turma = "Turma A",
             token = ""
-        )
+        ),
+        modifier = Modifier.fillMaxSize()
     )
 }

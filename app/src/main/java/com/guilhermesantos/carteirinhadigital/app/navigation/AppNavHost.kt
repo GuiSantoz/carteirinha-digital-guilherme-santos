@@ -1,4 +1,4 @@
-package com.guilhermesantos.carteirinhadigital2devest_b.app.navigation
+package com.guilhermesantos.carteirinhadigital.app.navigation
 
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
@@ -12,18 +12,18 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.guilhermesantos.carteirinhadigital2devest_b.app.di.AppContainer
-import com.guilhermesantos.carteirinhadigital2devest_b.app.session.SessionViewModel
-import com.guilhermesantos.carteirinhadigital2devest_b.app.session.SessionViewModelFactory
-import com.guilhermesantos.carteirinhadigital2devest_b.app.ui.AppShell
-import com.guilhermesantos.carteirinhadigital2devest_b.feature.carteirinha.presetantion.screen.CarteirinhaScreen
-import com.guilhermesantos.carteirinhadigital2devest_b.feature.home_aluno.presentation.screen.HomeScreen
-import com.guilhermesantos.carteirinhadigital2devest_b.feature.login.presentation.LoginViewModel
-import com.guilhermesantos.carteirinhadigital2devest_b.feature.login.presentation.factory.LoginViewModelFactory
-import com.guilhermesantos.carteirinhadigital2devest_b.feature.login.presentation.screen.LoginScreen
-import com.guilhermesantos.carteirinhadigital2devest_b.feature.unidadecurriculares.presentation.UnidadeCurricularViewModel
-import com.guilhermesantos.carteirinhadigital2devest_b.feature.unidadecurriculares.presentation.factory.UnidadeCurricularViewModelFactory
-import com.guilhermesantos.carteirinhadigital2devest_b.feature.unidadecurriculares.presentation.screen.UnidadeCurricularScreen
+import com.guilhermesantos.carteirinhadigital.app.di.AppContainer
+import com.guilhermesantos.carteirinhadigital.app.session.SessionViewModel
+import com.guilhermesantos.carteirinhadigital.app.session.SessionViewModelFactory
+import com.guilhermesantos.carteirinhadigital.app.ui.AppShell
+import com.guilhermesantos.carteirinhadigital.feature.carteirinha.presetantion.screen.CarteirinhaScreen
+import com.guilhermesantos.carteirinhadigital.feature.home_aluno.presentation.screen.HomeScreen
+import com.guilhermesantos.carteirinhadigital.feature.login.presentation.LoginViewModel
+import com.guilhermesantos.carteirinhadigital.feature.login.presentation.factory.LoginViewModelFactory
+import com.guilhermesantos.carteirinhadigital.feature.login.presentation.screen.LoginScreen
+import com.guilhermesantos.carteirinhadigital.feature.unidadecurriculares.presentation.UnidadeCurricularViewModel
+import com.guilhermesantos.carteirinhadigital.feature.unidadecurriculares.presentation.factory.UnidadeCurricularViewModelFactory
+import com.guilhermesantos.carteirinhadigital.feature.unidadecurriculares.presentation.screen.UnidadeCurricularScreen
 
 @Composable
 fun AppNavHost(

@@ -1,4 +1,4 @@
-package com.guilhermesantos.carteirinhadigital2devest_b.core.designsystem.component
+package com.guilhermesantos.carteirinhadigital.core.designsystem.component
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -36,7 +36,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.guilhermesantos.carteirinhadigital2devest_b.app.navigation.Routes
+import com.guilhermesantos.carteirinhadigital.app.navigation.Routes
 
 /**
  * Pílula de status/etiqueta usada em vários pontos do protótipo

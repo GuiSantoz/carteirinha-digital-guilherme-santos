@@ -1,13 +1,14 @@
-package com.guilhermesantos.carteirinhadigital2devest_b.feature.unidadecurriculares.presentation.factory
+package com.guilhermesantos.carteirinhadigital.feature.unidadecurriculares.presentation.factory
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.guilhermesantos.carteirinhadigital2devest_b.feature.unidadecurriculares.domain.repository.UnidadeCurricularRepository
-import com.guilhermesantos.carteirinhadigital2devest_b.feature.unidadecurriculares.presentation.UnidadeCurricularViewModel
+import com.guilhermesantos.carteirinhadigital.feature.unidadecurriculares.domain.repository.UnidadeCurricularRepository
+import com.guilhermesantos.carteirinhadigital.feature.unidadecurriculares.presentation.UnidadeCurricularViewModel
 
 class UnidadeCurricularViewModelFactory(
-    private val repository: UnidadeCurricularRepository
+    private val repository:UnidadeCurricularRepository
 ) : ViewModelProvider.Factory {
+
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(UnidadeCurricularViewModel::class.java)) {
             @Suppress("UNCHECKED_CAST")
