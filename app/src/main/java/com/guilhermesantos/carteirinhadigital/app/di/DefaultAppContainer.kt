@@ -6,9 +6,6 @@ import com.guilhermesantos.carteirinhadigital.feature.login.data.remote.service.
 import com.guilhermesantos.carteirinhadigital.feature.login.data.repository.ApiLoginRepositoryImpl
 import com.guilhermesantos.carteirinhadigital.feature.login.data.repository.FakeAuthRepository
 import com.guilhermesantos.carteirinhadigital.feature.login.domain.repository.LoginRepository
-import com.guilhermesantos.carteirinhadigital.feature.aluno.unidadescurriculares.data.remote.service.UnidadeCurricularApi
-import com.guilhermesantos.carteirinhadigital.feature.aluno.unidadescurriculares.data.repository.ApiUnidadeCurricularRepositoryImpl
-import com.guilhermesantos.carteirinhadigital.feature.aluno.unidadescurriculares.domain.repository.UnidadeCurricularRepository
 
 class DefaultAppContainer : AppContainer {
     override val sessionTokenStore : SessionTokenStore = SessionTokenStore()

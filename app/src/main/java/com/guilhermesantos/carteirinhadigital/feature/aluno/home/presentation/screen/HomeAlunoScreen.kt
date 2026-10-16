@@ -105,7 +105,7 @@ private fun HomeAlunoScreenPreview() {
                 matricula = "2026000001",
                 perfil = PerfilAcesso.ALUNO,
                 curso = "Desenvolvimento de Sistemas",
-                turma = "2DEVEST-A",
+                turma = "2DEVEST-B",
                 token = "token"
             ),
             onCarteirinhaClick = {},
